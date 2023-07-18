@@ -1,0 +1,13 @@
+# get two input integers for cost_price and selling_price
+cost_price = int(input())
+selling_price = int(input())
+
+# calculate profit or loss amount and print it
+
+profit = selling_price-cost_price
+print(profit)
+
+Create a program to find the profit/loss amount of a shop.
+
+Get two input integers cost_price and selling_price.
+Calculate the profit or loss amount (i.e. selling_price - cost_price).
