@@ -1,0 +1,23 @@
+import boto3
+
+def lambda_handler(event, context):
+    # Create an SNS client
+    sns = boto3.client('sns')
+    
+    # Specify your SNS topic ARN
+    sns_topic_arn = 'YOUR_SNS_TOPIC_ARN'
+    
+    # Specify your notification message
+    message = "Your notification message here."
+    
+    # Publish the notification to SNS
+    response = sns.publish(
+        TopicArn=sns_topic_arn,
+        Message=message
+    )
+    
+    print("Notification sent successfully to SNS topic:", sns_topic_arn)
+    return {
+        'statusCode': 200,
+        'body': 'Notification sent successfully to SNS topic'
+    }
